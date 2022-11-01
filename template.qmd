@@ -8,8 +8,10 @@ format:
         documentclass: bxjsarticle
         classoption: [twocolumn,xelatex,ja=standard]
         include-in-header:
-            \usepackage{mhchem}
-            \usepackage{siunitx}
+            text: |
+                \usepackage{mhchem}
+                \usepackage{physics}
+                \usepackage{siunitx}
         number-sections: true
 pdf-engine: xelatex
 jupyter: julia-1.5
