@@ -1,0 +1,19 @@
+---
+title: Your title
+author: Your name
+date: today
+date-format: iso
+format:
+    pdf:
+        documentclass: bxjsarticle
+        classoption: [twocolumn,xelatex,ja=standard]
+        include-in-header:
+            \usepackage{mhchem}
+            \usepackage{siunitx}
+        number-sections: true
+pdf-engine: xelatex
+jupyter: julia-1.5
+---
+
+# chapter
+## section
