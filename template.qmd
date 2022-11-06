@@ -13,6 +13,7 @@ format:
                 \usepackage{physics}
                 \usepackage{siunitx}
         number-sections: true
+        papersize: a4paper
 pdf-engine: xelatex
 jupyter: julia-1.5
 ---
