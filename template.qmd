@@ -16,6 +16,9 @@ format:
         papersize: a4paper
 pdf-engine: xelatex
 jupyter: julia-1.5
+execute:
+    echo false
+bibliography: cite.bib
 ---
 
 # chapter
