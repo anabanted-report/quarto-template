@@ -1,0 +1,45 @@
+---
+title: Title
+author: 
+    - name: Author
+date: today
+date-format: iso
+format:
+    pdf:
+        documentclass: bxjsarticle
+        classoption: [xelatex,ja=standard,twocolumn]
+        include-in-header:
+            text: |
+                \usepackage{mhchem}
+                \usepackage{physics}
+                \usepackage{siunitx}
+                \usepackage{url}
+                \usepackage{amsmath}
+                \makeatletter
+                \let\oldlt\longtable
+                \let\endoldlt\endlongtable
+                \def\longtable{\@ifnextchar[\longtable@i \longtable@ii}
+                \def\longtable@i[#1]{\begin{figure}[]
+                \onecolumn
+                \begin{minipage}{0.5\textwidth}
+                \oldlt[#1]
+                }
+                \def\longtable@ii{\begin{figure}[]
+                \onecolumn
+                \begin{minipage}{0.5\textwidth}
+                \oldlt
+                }
+                \def\endlongtable{\endoldlt
+                \end{minipage}
+                \twocolumn
+                \end{figure}}
+                \makeatother
+        number-sections: false
+        papersize: a4paper
+pdf-engine: xelatex
+execute:
+    echo: false
+bibliography: cite.bib
+csl: vancouver.csl
+---
+
